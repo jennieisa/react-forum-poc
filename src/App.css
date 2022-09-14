@@ -14,17 +14,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: lightblue;
 }
 
 .postListItem {
-  border: 2px solid black;
+  border: 2px solid gray;
   margin: 30px;
-  width: 250px;
+  width: 400px;
   height: 225px;
 }
 
 .postListItem:hover {
-  background-color:orange ;
+  background-color:lightgray ;
   color: white;
 }
 
@@ -34,9 +35,18 @@
   text-align: center;
 }
 
+.postPageWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  align-items: center;
+}
+
 .postContentWrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 80%
 }
 
 .buttonSection {
@@ -45,9 +55,10 @@
 }
 
 .postContent {
-  border: solid 2px black;
+  border: solid 2px gray;
   margin: 10px;
   padding: 10px;
+  background-color: white;
 }
 
 .commentsHeading {
@@ -55,9 +66,10 @@
 }
 
 .commentWrapper {
-  border: dotted 2px black;
+  border: dotted 2px gray;
   margin: 10px;
   padding: 10px;
+  background-color: white;
 }
 
 .noLinkStyle {
@@ -67,4 +79,23 @@
 
 .noListStyle {
   display: block;
+  padding: 10px;
+}
+
+.homePageImg {
+  width: 100px;
+}
+
+.topOfPost {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.postImage {
+  width: 400px;
+}
+
+.commentsHeading {
+  padding: 0px 10px;
 }

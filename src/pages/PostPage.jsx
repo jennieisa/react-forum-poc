@@ -43,20 +43,23 @@ const PostPage = () => {
             <header>
                 <Header />
             </header>
-            <main className='postContentWrapper'>
+            <main className='postPageWrapper'>
                 <section className='buttonSection'>
                     <Link to={"/"}>
                         <button>To homepage</button>
                     </Link>
                 </section>
-                {post && comments && 
-                    <>
-                        <PostContent title={post.title} body={post.body}/>
-                        {comments.map((comment, index) => 
-                            <Comment key={index} name={comment.name} email={comment.email} comment={comment.body}/>
-                        )}
-                    </>
-                }
+                <section className='postContentWrapper'>
+                    {post && comments &&
+                        <>
+                            <PostContent title={post.title} body={post.body}/>
+                            <h2 className='commentsHeading'>Comments</h2>
+                            {comments.map((comment, index) => 
+                                <Comment key={index} name={comment.name} email={comment.email} comment={comment.body}/>
+                            )}
+                        </>
+                    }
+                </section>
             </main>
         </>
     )
